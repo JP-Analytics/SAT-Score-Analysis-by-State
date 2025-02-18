@@ -18,8 +18,8 @@ When you click the **Knit** button a document will be generated that includes bo
 ## Load Libraries
 
 ```{r}
-# Install packages
-install.packages("ggrepel")
+# Install package if necessary
+# install.packages("ggrepel")
 ```
 
 ```{r}
@@ -238,7 +238,7 @@ ggplot(case1201, aes(x = Public, y = SAT)) +
     y = "Total SAT Score"
   ) +
   # Theme customization
-  theme_minimal(base_family = "Times New Roman") +  # Times New Roman for all text
+  theme_minimal(base_family = "Times") +  # Times New Roman for all text
   theme(
     plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),  # Center and bold the title
     axis.title = element_text(size = 14),  # Increase axis title font size
@@ -324,14 +324,14 @@ This visualization helps identify states that exceed or underperform relative to
 ```{r}
 ggplot(case1201, aes(x = Expected_SAT, y = SAT, label = State)) +
   geom_point(alpha = 0.7) + # adjust transparency
-  geom_text_repel(size = 3, max.overlaps = 15, family = "Times New Roman") + # prevent overlap
+  geom_text_repel(size = 3, max.overlaps = 15, family = "Times") + # prevent overlap
   geom_abline(slope = 1, intercept = 0, color = "red", linetype = "dashed") +
   labs(title = "Actual vs. Expected SAT Scores by State",
        x = "Expected SAT Score",
        y = "Actual SAT Score") +
   
 # Theme customization
-  theme_minimal(base_family = "Times New Roman") +  # Times New Roman for all text
+  theme_minimal(base_family = "Times") +  # Times New Roman for all text
   theme(
     plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),  # Center and bold the title
     axis.title = element_text(size = 14),  # Increase axis title font size
