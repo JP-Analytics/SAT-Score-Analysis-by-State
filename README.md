@@ -1,5 +1,4 @@
 # SAT Scores Analysis by State
-R Studio
 
 ## 📌 Overview
 
